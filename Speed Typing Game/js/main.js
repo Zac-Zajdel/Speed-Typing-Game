@@ -77,7 +77,7 @@ const words = [
 ];
 
 // Initialize Game
-function init() {
+const init = () => {
   // Show number of seconds in header
   seconds.innerHTML = currentLevel;
   // Load word from array
@@ -91,7 +91,7 @@ function init() {
 }
 
 // Start Match
-function startMatch() {
+const startMatch = () => {
   if (matchWords()) {
     isPlaying = true;
     time = currentLevel + 1;
@@ -109,7 +109,7 @@ function startMatch() {
 }
 
 //Match currentWord to wordInput
-function matchWords() {
+const matchWords = () => {
   if (wordInput.value === currentWord.innerHTML) {
     message.innerHTML = "Correct";
     return true;
@@ -120,7 +120,7 @@ function matchWords() {
 }
 
 // Pick and Show Random Word
-function showWord(words) {
+const showWord = (words) => {
   // Generate random array index
   const randIndex = Math.floor(Math.random() * words.length);
   // Output random word
@@ -128,7 +128,7 @@ function showWord(words) {
 }
 
 //Countdown Timer
-function countDown() {
+const countDown = () => {
   // Check time is not out
   if (time > 0) {
     time--;
@@ -140,7 +140,7 @@ function countDown() {
 }
 
 // Check Game Status
-function checkStatus() {
+const checkStatus = () => {
   if (!isPlaying && time === 0) {
     message.innerHTML = "Game Over!!!";
     score = -1;
