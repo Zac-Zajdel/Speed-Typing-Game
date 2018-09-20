@@ -9,6 +9,8 @@ const levels = {
   hard: 2
 };
 
+// EXAMPLE
+
 // To change level
 const currentLevel = levels.easy;
 
